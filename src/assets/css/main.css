@@ -5490,6 +5490,9 @@ fieldset:disabled .btn {
   .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
   }
+  form {
+    background: none;
+  }
   .sideNav {
     background: none;
     padding: 0 !important;

@@ -132,7 +132,7 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     border-radius: 10px;
     padding: 2rem 3rem;
     input {
