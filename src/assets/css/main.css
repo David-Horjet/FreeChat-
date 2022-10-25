@@ -5490,6 +5490,10 @@ fieldset:disabled .btn {
   .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
   }
+  .sideNav {
+    background: none;
+    padding: 0 !important;
+  }
   .sideNav .avatar-box, 
   .sideNav .settings {
     display: none !important;
