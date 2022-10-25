@@ -58,6 +58,13 @@ function Chat() {
     if (user) {
       socket.current = io(host, {
         withCredentials: true,
+        transportOptions: {
+          polling: {
+            extraHeaders: {
+              "my-custom-header": "abcd"
+            }
+          }
+        }
       });
       socket.current.emit("add-user", user._id);
     }
