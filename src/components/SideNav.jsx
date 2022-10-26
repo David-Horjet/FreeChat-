@@ -27,7 +27,7 @@ function SideNav({ user }) {
             </Link>
           </li>
           <li>
-            <Link to={"/"}>
+            <Link to={"/settings"}>
               <BsPersonBadge />
             </Link>
           </li>
@@ -96,7 +96,7 @@ const Container = styled.div`
   }
 
   .active a {
-    color: #fff !important;
+    color: #fff;
   }
 
   .side-navbar li a {

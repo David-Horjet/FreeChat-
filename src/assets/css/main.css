@@ -5505,7 +5505,7 @@ fieldset:disabled .btn {
     background-color: var(--primary-color);
     width: 100% !important;
     position: fixed;
-    padding: 10px 0;
+    padding: 15px;
     z-index: 99;
     bottom: 0;
     right: 0;
@@ -5514,6 +5514,12 @@ fieldset:disabled .btn {
   }
   .sideNav .side-navbar ul li {
     padding: 0 !important;
+  }
+  .sideNav .active {
+    background: none !important;
+  }
+  .sideNav .active a {
+    color: var(--color) !important;
   }
   .contacts-container {
     flex: 0 0 auto !important;

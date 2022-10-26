@@ -44,11 +44,15 @@ function Login() {
         if (res.data.status === true) {
           dispatch({ type: "LOGIN_SUCCESS", payload: res.data.user });
           localStorage.setItem("token", JSON.stringify(res.data.token));
-          navigate("/");
+          toast.success(res.data.msg, toastOptions);
+          setTimeout(() => {
+            navigate("/")
+          }, 3000);
         }
       }
     } catch (error) {
       dispatch({ type: "LOGIN_FAILURE" });
+      toast.error("Network Error", toastOptions);
     }
   };
 
@@ -92,7 +96,9 @@ function Login() {
             name="password"
             onChange={(e) => handleChange(e)}
           />
-          <button type="submit" disabled={isFetching}>Log in</button>
+          {isFetching ?
+           (<button type="submit" disabled >Please wait...</button>) :
+           (<button type="submit">Log in</button>)}
           <span>
             Don't have an account ? <Link to={"/register"}>Register</Link>
           </span>
@@ -145,7 +151,8 @@ const FormContainer = styled.div`
       font-size: 1rem;
     }
     &:focus {
-      border: none;
+      border: none !important;
+      outline: none !important;
     }
     button {
       background: var(--gradient);
@@ -156,23 +163,20 @@ const FormContainer = styled.div`
       cursor: pointer;
       border-radius: 0.4rem;
       font-size: 1rem;
-      text-transform: uppercase;
-      transition: 0.5s ease-in-out;
+      transition: 0.3s all;
       &:hover {
-        background-color: #4e0eff;
+        background: #4e0eff;
       }
       &:disabled {
         cursor: not-allowed;
-        background-color: #946dff;
+        background: #946dff;
       }
     }
     span {
       color: var(--secondary-color);
       a {
         color: #4e0eff;
-        text-transform: none;
         font-weight: bold;
-        text-transform: uppercase;
         text-decoration: none;
       }
     }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { host } from "../utils/APIRoutes";
 import { BsFillGridFill, BsSearch } from "react-icons/bs";
 import RoundLoader from "./Loaders/RoundLoader";
