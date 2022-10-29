@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { host } from "../utils/APIRoutes";
+import { Link } from "react-router-dom";
 import { BsFillGridFill, BsSearch } from "react-icons/bs";
 import RoundLoader from "./Loaders/RoundLoader";
 
-function Contacts({ contacts, changeChat }) {
+function Contacts({ contacts, changeChat, user }) {
   const [currentSelected, setCurrentSelected] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if (contacts) {
+    if (contacts.length <= 0) {
       setIsLoading(true);
     }
   }, [contacts]);
@@ -27,9 +28,9 @@ function Contacts({ contacts, changeChat }) {
               <div className="card-head">
                 <div className=" d-flex justify-content-between align-items-center">
                   <h1 className="h5 mb-0">Chats</h1>
-                  <div className="dropend position-relative">
+                  <Link to={`/${user.username}`} className="dropend position-relative">
                     <BsFillGridFill />
-                  </div>
+                  </Link>
                 </div>
               </div>
               <div className="head pb-3">

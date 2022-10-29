@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Context } from "../context/Context";
 import axios from "axios";
 import { loginRoute } from "../utils/APIRoutes";
-import { DiSenchatouch } from "react-icons/di";
+import logo from "../assets/images/logo2.png"
 
 function Login() {
   const navigate = useNavigate();
@@ -79,7 +79,7 @@ function Login() {
       <FormContainer>
         <form onSubmit={(event) => handleSubmit(event)}>
           <div className="logo">
-            <DiSenchatouch />
+            <img src={logo} alt="logo"/>
             <h1>
               Free<span>Chat</span>
             </h1>
@@ -122,9 +122,8 @@ const FormContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    svg {
-      color: var(--color);
-      font-size: 25px;
+    img {
+      width: 50px;
     }
     h1 {
       color: var(--secondary-color);

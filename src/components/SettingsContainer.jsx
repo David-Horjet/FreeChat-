@@ -34,6 +34,7 @@ function SettingsContainer({ user, switchTheme }) {
   };
 
   const logoutWarnFunction = () => {
+    console.log("clicked");
     setLogoutWarn(!logoutWarn);
   };
 

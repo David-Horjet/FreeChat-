@@ -88,7 +88,7 @@ const Container = styled.div`
   }
 
   .settings a {
-    color: var(--secondary-color);
+    color: var(--faded-secondary-color);
   }
 
   .active {

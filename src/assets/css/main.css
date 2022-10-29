@@ -12,6 +12,7 @@
 
 :root {
   --color: #3378FF;
+  --bg-color: #d8e3fa;
   --gradient: linear-gradient(to top right, #3378FF, #9442FE);
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -72,13 +73,13 @@
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
   
-  --primary-color: #f6f6fc !important;
+  --primary-color: #FFFBFF !important;
   --cover-primary-color: #f0f2f5 !important;
   --secondary-color: #14191e !important;
   --lowOpacity-secondary-color: #14191e85 !important;
   --lowOpacity-primary-color: #ffffff51 !important;
   --faded-secondary-color: #14191e !important;
-  --faded-primary-color: #f0f0f0 !important;
+  --faded-primary-color: #F0F2F5 !important;
 }
 
 [data-theme='dark'] {
@@ -5502,7 +5503,6 @@ fieldset:disabled .btn {
     display: none !important;
   }
   .sideNav .side-navbar ul {
-    background-color: var(--primary-color);
     width: 100% !important;
     position: fixed;
     padding: 15px;
