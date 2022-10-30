@@ -56,12 +56,7 @@ function Chat() {
 
   useEffect(() => {
     if (user) {
-      socket.current = io(host, {
-        wwithCredentials: true,
-        extraHeaders: {
-          "Access-Control-Allow-Origin": "https://freechatapi.herokuapp.com"
-        }
-      });
+      socket.current = io(host, { });
       socket.current.emit("add-user", user._id);
     }
   }, [user]);
