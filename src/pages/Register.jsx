@@ -22,17 +22,11 @@ function Register() {
     autoClose: "8000",
     pauseOnHover: true,
     draggable: true,
-    theme: "light",
+    theme: "error",
   };
 
   useEffect(() => {
     document.title = "Register - FreeChat";
-  });
-
-  useEffect(() => {
-    if (localStorage.getItem("chat-app-user")) {
-      navigate("/");
-    }
   });
 
   const handleSubmit = async (event) => {
